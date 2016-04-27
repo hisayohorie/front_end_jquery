@@ -15,10 +15,16 @@ $(document).on('ready', function() {
 					alert("X is the winner");
 				}else if($('.O').hasClass(combo[0]) && $('.O').hasClass(combo[1]) && $('.O').hasClass(combo[2])){
 					alert("O is the winner");
+				}else if($('.X').length === 5){
+					alert("Stalemate!");
+					stopPropagation();
 				}
 				// compare each combo to a playerState array or use the DOM => s(".x")
 				// alert("we have a winner")
 			}
+			//if($('.X').length = 5 && !$('.X').hasClass(combo[0]) && !$('.X').hasClass(combo[1]) && !$('.X').hasClass(combo[2])){
+				
+			
 		}
 		
 		if(turn % 2 === 0){
